@@ -24,9 +24,31 @@
     <name>redis-maven-plugin Maven Plugin</name>
 
     <!-- FIXME change it to the project's website -->
-    <url>http://maven.apache.org</url>
+    <url>http://r351574nc3.github.io/redis-maven-plugin</url>
+
+    <licenses>
+        <license>
+            <name>Educational Community License, Version 2.0</name>
+            <url>${ecl.license.url}</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <organization>
+        <name>Github</name>
+        <url>http://r351574nc3.github.io/</url>
+    </organization>
+    <inceptionYear>2013</inceptionYear>
+    <ciManagement>
+        <system>jenkins</system>
+    </ciManagement>
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/r351574nc3/redis-maven-plugin/issues</url>
+    </issueManagement>
+
 
     <properties>
+        <ecl.license.url>http://maven.kuali.org/external/org/opensource/ecl/2.0/ecl-2.0.txt</ecl.license.url>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <gpg.phase>install</gpg.phase>
         <nexus-staging-maven-plugin.version>1.4.4</nexus-staging-maven-plugin.version>
@@ -270,4 +292,27 @@
             </build>
         </profile>
     </profiles>
+
+    <scm>
+        <connection>scm:git:git://github.com/r351574nc3/redis-maven-plugin.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/r351574nc3/redis-maven-plugin.git</developerConnection>
+        <url>https://github.com/r351574nc3/redis-maven-plugin</url>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+        <snapshotRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <site>
+            <id>site</id>
+            <name>redis-maven-plugin Site</name>
+            <url>http://r351574nc3.github.io/redis-maven-plugin</url>
+        </site>
+        <downloadUrl>https://github.com/r351574nc3/redis-maven-plugin/archive/master.zip</downloadUrl>
+    </distributionManagement>  
 </project>
