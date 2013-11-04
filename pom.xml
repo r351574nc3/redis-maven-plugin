@@ -308,11 +308,13 @@
             <id>sonatype-nexus-snapshots</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
+        <!--
         <site>
             <id>site</id>
             <name>redis-maven-plugin Site</name>
             <url>http://r351574nc3.github.io/redis-maven-plugin</url>
         </site>
+        -->
         <downloadUrl>https://github.com/r351574nc3/redis-maven-plugin/archive/master.zip</downloadUrl>
     </distributionManagement>  
 </project>
