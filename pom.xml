@@ -17,7 +17,7 @@
 
     <groupId>org.kualigan.maven.plugins</groupId>
     <artifactId>redis-maven-plugin</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
     <packaging>maven-plugin</packaging>
 
     <name>redis-maven-plugin Maven Plugin</name>
@@ -336,22 +336,6 @@
                         </executions>
                     </plugin>
                     <plugin>
-                        <groupId>org.kuali.maven.plugins</groupId>
-                        <artifactId>license-maven-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>licenses</id>
-                                <goals>
-                                    <goal>add-third-party</goal>
-                                </goals>
-                                <phase>${license.phase}</phase>
-                                <configuration>
-                                    <thirdPartyFilename>META-INF/THIRD-PARTY.txt</thirdPartyFilename>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
                         <artifactId>maven-gpg-plugin</artifactId>
                         <executions>
                             <execution>
@@ -478,7 +462,7 @@
         <connection>scm:git:git://github.com/r351574nc3/redis-maven-plugin.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/r351574nc3/redis-maven-plugin.git</developerConnection>
         <url>https://github.com/r351574nc3/redis-maven-plugin</url>
-      <tag>HEAD</tag>
+      <tag>redis-maven-plugin-1.2</tag>
   </scm>
 
     <distributionManagement>
