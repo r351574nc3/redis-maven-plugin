@@ -22,7 +22,6 @@
 
     <name>redis-maven-plugin Maven Plugin</name>
 
-    <!-- FIXME change it to the project's website -->
     <url>http://r351574nc3.github.io/redis-maven-plugin</url>
 
     <licenses>
@@ -464,8 +463,7 @@
         <connection>scm:git:git://github.com/r351574nc3/redis-maven-plugin.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/r351574nc3/redis-maven-plugin.git</developerConnection>
         <url>https://github.com/r351574nc3/redis-maven-plugin</url>
-      <tag>redis-maven-plugin-0.1.0</tag>
-  </scm>
+    </scm>
 
     <distributionManagement>
         <repository>
