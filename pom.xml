@@ -46,7 +46,7 @@
 
 
     <properties>
-        <aether-api.version>1.1</aether-api.version>
+        <aether-api.version>1.13.1</aether-api.version>
         <build-helper-maven-plugin.version>1.7</build-helper-maven-plugin.version>
         <buildnumber-maven-plugin.version>1.2</buildnumber-maven-plugin.version>
         <ecl.license.url>http://maven.kuali.org/external/org/opensource/ecl/2.0/ecl-2.0.txt</ecl.license.url>
