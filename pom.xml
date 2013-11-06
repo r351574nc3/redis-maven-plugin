@@ -66,7 +66,7 @@
         <maven-javadoc-plugin.version>2.9</maven-javadoc-plugin.version>
         <maven-license-plugin.version>1.9.0</maven-license-plugin.version>
         <maven-plugin-annotations.version>3.2</maven-plugin-annotations.version>
-        <maven-plugin-api.version>2.0</maven-plugin-api.version>
+        <maven-plugin-api.version>3.1.1</maven-plugin-api.version>
         <maven-plugin-plugin.version>3.2</maven-plugin-plugin.version>
         <maven-project-info-reports-plugin.version>2.7</maven-project-info-reports-plugin.version>
         <maven-release-plugin.version>2.4</maven-release-plugin.version>
@@ -78,7 +78,7 @@
         <nexus-staging-maven-plugin.version>1.4.4</nexus-staging-maven-plugin.version>
         <!-- This gets set to false in the sonatype-oss-release profile -->
         <nexus.staging.skip>true</nexus.staging.skip>
-        <plexus-utils.version>3.0.8</plexus-utils.version>
+        <plexus-utils.version>3.0.15</plexus-utils.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <site.descriptor.phase>package</site.descriptor.phase>
         <testjar.phase>package</testjar.phase>
