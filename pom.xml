@@ -75,7 +75,7 @@
         <maven-site-plugin.version>3.3</maven-site-plugin.version>
         <maven-source-plugin.version>2.2.1</maven-source-plugin.version>
         <maven-surefire-plugin.version>2.16</maven-surefire-plugin.version>
-        <nexus-staging-maven-plugin.version>1.4.4</nexus-staging-maven-plugin.version>
+        <nexus-staging-maven-plugin.version>1.4.8</nexus-staging-maven-plugin.version>
         <!-- This gets set to false in the sonatype-oss-release profile -->
         <nexus.staging.skip>true</nexus.staging.skip>
         <plexus-utils.version>3.0.15</plexus-utils.version>
