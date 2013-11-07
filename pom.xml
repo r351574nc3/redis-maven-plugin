@@ -21,7 +21,8 @@
     <packaging>maven-plugin</packaging>
 
     <name>redis-maven-plugin Maven Plugin</name>
-
+    <description>Embedded Java implementation Redis server for development.</description>
+  
     <url>http://r351574nc3.github.io/redis-maven-plugin</url>
 
     <licenses>
@@ -35,6 +36,15 @@
         <name>Github</name>
         <url>http://r351574nc3.github.io/</url>
     </organization>
+    <developers>
+        <developer>
+            <id>r351574nc3</id>
+            <name>Leo Przybylski</name>
+            <email>r351574nc3@gmail.com</email>
+            <organization>com.github.r351574nc3</organization>
+            <timezone>-7</timezone>
+        </developer>
+    </developers>
     <inceptionYear>2013</inceptionYear>
     <ciManagement>
         <system>jenkins</system>
