@@ -285,25 +285,6 @@
                     </configuration>
                 </plugin>
                 <plugin>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>${maven-war-plugin.version}</version>
-                    <configuration>
-                        <archive>
-                            <manifestEntries>
-                                <Bundle-Version>${project.version}</Bundle-Version>
-                                <Bundle-Name>${project.name}</Bundle-Name>
-                                <Bundle-License>${kuali.ecl.license.url}</Bundle-License>
-                                <Bundle-Vendor>${project.organization.name}</Bundle-Vendor>
-                                <Bundle-DocURL>${project.organization.url}</Bundle-DocURL>
-                                <Bundle-Timestamp>${maven.build.timestamp}</Bundle-Timestamp>
-                                <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
-                                <Bundle-BuildNumber>${env.BUILD_NUMBER}</Bundle-BuildNumber>
-                                <Maven-Version>${maven.version}</Maven-Version>
-                            </manifestEntries>
-                        </archive>
-                    </configuration>
-                </plugin>
-                <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>versions-maven-plugin</artifactId>
                     <version>${versions-maven-plugin.version}</version>
