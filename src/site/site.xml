@@ -14,7 +14,7 @@
                 <href>/index.html</href>
             </topBarIcon>
             <topBarEnabled>true</topBarEnabled>
-            <sideBarEnabled>true</sideBarEnabled>
+            <sideBarEnabled>false</sideBarEnabled>
             <gitHub>
                 <projectId>r351574nc3/redis-maven-plugin</projectId>
                 <ribbonOrientation>right</ribbonOrientation>
