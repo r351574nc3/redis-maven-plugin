@@ -87,6 +87,7 @@
         <maven-source-plugin.version>2.2.1</maven-source-plugin.version>
         <maven-surefire-plugin.version>2.16</maven-surefire-plugin.version>
         <nexus-staging-maven-plugin.version>1.4.8</nexus-staging-maven-plugin.version>
+        <netty.version>4.0.12.Final</netty.version>
         <!-- This gets set to false in the sonatype-oss-release profile -->
         <nexus.staging.skip>true</nexus.staging.skip>
         <plexus-utils.version>3.0.15</plexus-utils.version>
@@ -97,6 +98,33 @@
     </properties>
 
     <dependencies>
+        <!--
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-transport</artifactId>
+            <version>4.0.12.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-codec</artifactId>
+            <version>4.0.12.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-common</artifactId>
+            <version>4.0.12.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.0.12.Final</version>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>com.github.spullara.redis</groupId>
+            <artifactId>netty4-server</artifactId>
+            <version>0.7</version>
+        </dependency>
         <dependency>
             <groupId>org.sonatype.aether</groupId>
             <artifactId>aether-api</artifactId>
@@ -483,7 +511,7 @@
         <developerConnection>scm:git:ssh://git@github.com/r351574nc3/redis-maven-plugin.git</developerConnection>
         <url>https://github.com/r351574nc3/redis-maven-plugin</url>
       <tag>HEAD</tag>
-  </scm>
+    </scm>
 
     <distributionManagement>
         <repository>
