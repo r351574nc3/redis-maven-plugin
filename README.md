@@ -7,6 +7,47 @@ server shutsdown or closes, the data is no longer available.
 
 Running with Integration Tests
 ====================
+Just add the following plugin. The redis plugin is automatically
+attached to the pre-integration-test and post-integration-test
+phases. 
+
+```
+<plugin>
+    <groupId>org.kualigan.maven.plugins</groupId>
+    <artifactId>redis-maven-plugin</artifactId>
+    <version>${redis-maven-plugin.version}</version>
+</plugin>
+```
+
+
+Attaching to Another Phase
+==================
+In case (for whatever reason), you don't want your redis server
+started/stopped with integration tests, here's how you would configure it.
+
+```
+<plugin>
+    <groupId>org.kualigan.maven.plugins</groupId>
+    <artifactId>redis-maven-plugin</artifactId>
+    <version>${redis-maven-plugin.version}</version>
+    <executions>
+        <execution>
+            <id>start-redis</id>
+            <phase>generate-resources</phase>
+            <goals>
+                <goal>start</goal>
+            </goals>
+        </execution>
+        <execution>
+            <id>stop-redis</id>
+            <phase>compile</phase>
+            <goals>
+                <goal>stop</goal>
+            </goals>
+        </execution>      
+    </executions>
+</plugin>
+```
 
 Running Unforked
 ============
