@@ -17,7 +17,7 @@
 
     <groupId>org.kualigan.maven.plugins</groupId>
     <artifactId>redis-maven-plugin</artifactId>
-    <version>0.1.15</version>
+    <version>0.1.16-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
 
     <name>redis-maven-plugin Maven Plugin</name>
@@ -502,7 +502,7 @@
         <connection>scm:git:git://github.com/r351574nc3/redis-maven-plugin.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/r351574nc3/redis-maven-plugin.git</developerConnection>
         <url>https://github.com/r351574nc3/redis-maven-plugin</url>
-      <tag>redis-maven-plugin-0.1.15</tag>
+      <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
