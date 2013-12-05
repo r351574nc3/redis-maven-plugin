@@ -46,16 +46,13 @@ import java.io.IOException;
  * Goal which touches a timestamp file.
  *
  */
-@Mojo(name = "start", defaultPhase = LifecyclePhase.PROCESS_SOURCES)
+@Mojo(name = "start", defaultPhase = LifecyclePhase.NONE, requiresProject = false)
 public class StartRedisMojo extends AbstractMojo {
-    /**
-     * Location of the file.
-     */
-    @Parameter( defaultValue = "${project.build.directory}", property = "outputDir", required = true )
-    private File outputDirectory;
+    public static final String REDIS_GROUP_CONTEXT_PROPERTY_NAME = StartRedisMojo.class.getName()
+        + File.pathSeparator + "redis";
 
     /**
-     * Location of the file.
+     * Redis server port number.
      */
     @Parameter( defaultValue = "${redis.port}", property = "port", required = false )
     private int port;
@@ -69,25 +66,31 @@ public class StartRedisMojo extends AbstractMojo {
             throw new MojoExecutionException("Unable to start redis server", e);
         }
     }
-    
+
+    /**
+     * Start the redis server
+     *
+     */
     public void start() throws InterruptedException {
         // Only execute the command handler in a single thread
         final RedisCommandHandler commandHandler = new RedisCommandHandler(new SimpleRedisServer());
 
+
         // Configure the server.
         final ServerBootstrap b = new ServerBootstrap();
         final DefaultEventExecutorGroup group = new DefaultEventExecutorGroup(1);
+        getPluginContext().put(REDIS_GROUP_CONTEXT_PROPERTY_NAME, group);
+
         try {
             b.group(new NioEventLoopGroup(), new NioEventLoopGroup())
                 .channel(NioServerSocketChannel.class)
                 .option(ChannelOption.SO_BACKLOG, 100)
-                .localAddress(port)
+                .localAddress(getPort())
                 .childOption(ChannelOption.TCP_NODELAY, true)
                 .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         public void initChannel(SocketChannel ch) throws Exception {
                             final ChannelPipeline p = ch.pipeline();
-//             p.addLast(new ByteLoggingHandler(LogLevel.INFO));
                             p.addLast(new RedisCommandDecoder());
                             p.addLast(new RedisReplyEncoder());
                             p.addLast(group, commandHandler);
@@ -95,24 +98,20 @@ public class StartRedisMojo extends AbstractMojo {
                     });
 
             // Start the server.
-            final ChannelFuture f = b.bind().sync();
+            getLog().info("Starting Redis(port=" + port + ") server...");
+            
+            final ChannelFuture f = b.bind();
 
+            // Add non-forked version later
             // Wait until the server socket is closed.
-            f.channel().closeFuture().sync();
+            // f.sync();
+            // f.channel().closeFuture().sync();
         } finally {
             // Shut down all event loops to terminate all threads.
-            group.shutdownGracefully();
+            // group.shutdownGracefully();
         }
     }
 
-    public void setOutputDirectory(final File outputDirectory) {
-        this.outputDirectory = outputDirectory;
-    }
-
-    public File getOutputDirectory() {
-        return this.outputDirectory;
-    }
-    
     public void setPort(final int port) {
         this.port = port;
     }
