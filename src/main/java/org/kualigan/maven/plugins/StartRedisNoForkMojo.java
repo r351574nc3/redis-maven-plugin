@@ -42,30 +42,25 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+
 /**
- * Start an in-memory redis server wherever want and whenever you want.
+ * Start an in-memory redis server wherever want and whenever you want. This is never forked, so it doesn't obey the <code>redis.forked</code> property.
  *
  * @author Leo Przybylski
  */
-@Mojo(name = "start", defaultPhase = LifecyclePhase.NONE, requiresProject = false)
-public class StartRedisMojo extends AbstractStartRedisMojo {
+@Mojo(name = "start-no-fork", defaultPhase = LifecyclePhase.NONE, requiresProject = false)
+public class StartRedisNoForkMojo extends AbstractStartRedisMojo {
+
     /**
      * Redis server port number.
      */
     @Parameter(property = "redis.port", defaultValue = "6379")
     private int port;
 
-    /**
-     * Fork redis?
-     */
-    @Parameter(property = "redis.forked", defaultValue = "false")
-    private boolean forked;
-
-
     public void execute()
         throws MojoExecutionException {
         try {
-            start(getForked());
+            start(false);
         }
         catch (Exception e) {
             throw new MojoExecutionException("Unable to start redis server", e);
@@ -78,14 +73,6 @@ public class StartRedisMojo extends AbstractStartRedisMojo {
     
     public int getPort() {
         return port;
-    }
-
-    public void setForked(final Boolean forked) {
-        this.forked = forked;
-    }
-    
-    public Boolean getForked() {
-        return forked;
     }
 }
 
