@@ -31,7 +31,7 @@ Add the following to your ```$HOME/.m2/settings.xml```
 Execute the following 
 
 ```
-mvn redis-server:startUnforked
+mvn redis-server:start-no-fork
 ```
 
 SNAPSHOTS
