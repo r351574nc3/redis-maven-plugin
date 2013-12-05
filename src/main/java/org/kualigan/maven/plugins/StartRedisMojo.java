@@ -54,7 +54,7 @@ public class StartRedisMojo extends AbstractMojo {
     /**
      * Redis server port number.
      */
-    @Parameter( defaultValue = "${redis.port}", property = "port", required = false )
+    @Parameter(property = "redis.server.port", defaultValue = "6379")
     private int port;
 
     public void execute()
