@@ -6,7 +6,7 @@ project. This is an in-memory redis server. That means that when the
 server shutsdown or closes, the data is no longer available.
 
 Running with Integration Tests
-====================
+-------------------------
 Just add the following plugin. The redis plugin is automatically
 attached to the pre-integration-test and post-integration-test
 phases. 
@@ -21,7 +21,7 @@ phases.
 
 
 Attaching to Another Phase
-==================
+-----------------------
 In case (for whatever reason), you don't want your redis server
 started/stopped with integration tests, here's how you would configure it.
 
@@ -50,7 +50,7 @@ started/stopped with integration tests, here's how you would configure it.
 ```
 
 Running Unforked
-============
+---------------
 Sometimes there is a need to just crank up a redis server while you're
 running your project, but you're not running integration tests. For
 example, maybe you're running a tomcat7 instance of your application
