@@ -185,6 +185,22 @@
         &lt;/execution&gt;      
     &lt;/executions&gt;
 &lt;/plugin&gt;</pre></div></div>
+<div class="section">
+<h2>Running Unforked<a name="Running_Unforked"></a></h2>
+<p>Sometimes there is a need to just crank up a redis server while you're running your project, but you're not running integration tests. For example, maybe you're running a tomcat7 instance of your application that requires an embedded redis server. We can do that! Or maybe you just need a quick redis server for whatever.</p>
+<p>Add the following to your <tt>$HOME/.m2/settings.xml</tt></p>
+<div class="source">
+<pre>&lt;settings&gt;
+    &lt;pluginGroups&gt;
+        &lt;pluginGroup&gt;org.kualigan.maven.plugins&lt;/pluginGroup&gt;
+    &lt;/pluginGroups&gt;
+...
+...
+&lt;/settings&gt;</pre></div></div>
+<div class="section">
+<h2>Execute the following<a name="Execute_the_following"></a></h2>
+<div class="source">
+<pre>mvn redis-server:start-no-fork</pre></div></div>
                   </div>
           </div>
 
