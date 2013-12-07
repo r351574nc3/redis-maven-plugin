@@ -7,4 +7,15 @@
 
 
 
-------
+Running with Integration Tests
+
+  Just add the following plugin. The redis plugin is automatically attached to the pre-integration-test and post-integration-test phases.
+
++-------------------------------+
+<plugin>
+    <groupId>org.kualigan.maven.plugins</groupId>
+    <artifactId>redis-maven-plugin</artifactId>
+    <version>${redis-maven-plugin.version}</version>
+</plugin>
++-------------------------------+
+	
