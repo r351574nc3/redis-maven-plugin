@@ -11,7 +11,7 @@ Just add the following plugin. The redis plugin is automatically
 attached to the pre-integration-test and post-integration-test
 phases. 
 
-```
+```xml
 <plugin>
     <groupId>org.kualigan.maven.plugins</groupId>
     <artifactId>redis-maven-plugin</artifactId>
@@ -25,7 +25,7 @@ Attaching to Another Phase
 In case (for whatever reason), you don't want your redis server
 started/stopped with integration tests, here's how you would configure it.
 
-```
+```xml
 <plugin>
     <groupId>org.kualigan.maven.plugins</groupId>
     <artifactId>redis-maven-plugin</artifactId>
@@ -59,7 +59,7 @@ you just need a quick redis server for whatever.
 
 Add the following to your ```$HOME/.m2/settings.xml```
 
-```
+```xml
 <settings>
     <pluginGroups>
         <pluginGroup>org.kualigan.maven.plugins</pluginGroup>
