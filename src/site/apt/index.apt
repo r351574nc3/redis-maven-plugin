@@ -6,12 +6,12 @@
 	 ------
 
 
-Welcome to redis-maven-plugin [https://buildhive.cloudbees.com/job/r351574nc3/job/redis-maven-plugin/badge/icon] {{{https://buildhive.cloudbees.com/job/r351574nc3/job/redis-maven-plugin/}Build Status}}
+  Welcome to redis-maven-plugin [https://buildhive.cloudbees.com/job/r351574nc3/job/redis-maven-plugin/badge/icon] {{{https://buildhive.cloudbees.com/job/r351574nc3/job/redis-maven-plugin/}Build Status}}
 
-Maven plugin to embed a redis-server based on the redis-protocol
-project. This is an in-memory redis server. That means that when the
-server shutsdown or closes, the data is no longer available.
+  Maven plugin to embed a redis-server based on the redis-protocol
+  project. This is an in-memory redis server. That means that when the
+  server shutsdown or closes, the data is no longer available.
 
-Checkout the maven plugin page at [http://r351574nc3.github.io/redis-maven-plugin]
+  Checkout the maven plugin page at [http://r351574nc3.github.io/redis-maven-plugin]
 
-Examples can be found on the {{{http://r351574nc3.github.io/redis-maven-plugin/examples.html}examples page}}
+  Examples can be found on the {{{http://r351574nc3.github.io/redis-maven-plugin/examples.html}examples page}}
