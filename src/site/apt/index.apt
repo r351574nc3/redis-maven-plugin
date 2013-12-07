@@ -2,11 +2,11 @@
 Introduction
 ------
 Leo Przybylski (r351574nc3)
-------
-------
 
 
-Welcome to redis-maven-plugin {{{https://buildhive.cloudbees.com/job/r351574nc3/job/redis-maven-plugin/}[https://buildhive.cloudbees.com/job/r351574nc3/job/redis-maven-plugin/badge/icon]}}
+
+
+Welcome to redis-maven-plugin [https://buildhive.cloudbees.com/job/r351574nc3/job/redis-maven-plugin/badge/icon] {{{https://buildhive.cloudbees.com/job/r351574nc3/job/redis-maven-plugin/}}Build Status}
 
 Maven plugin to embed a redis-server based on the redis-protocol
 project. This is an in-memory redis server. That means that when the
