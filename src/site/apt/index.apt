@@ -12,4 +12,4 @@
   project. This is an in-memory redis server. That means that when the
   server shutsdown or closes, the data is no longer available.
 
-  Examples can be found on the {{{http://r351574nc3.github.io/redis-maven-plugin/examples.html}examples page}} or on the {{{http://www.github.com/r351574nc3/redis-maven-plugin/}}GitHub Page}.
+  Examples can be found on the {{{http://r351574nc3.github.io/redis-maven-plugin/examples.html}examples page}} or on the {{{http://www.github.com/r351574nc3/redis-maven-plugin/}GitHub Page}}.
