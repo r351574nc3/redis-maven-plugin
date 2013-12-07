@@ -5,6 +5,8 @@ Maven plugin to embed a redis-server based on the redis-protocol
 project. This is an in-memory redis server. That means that when the
 server shutsdown or closes, the data is no longer available.
 
+Checkout the maven plugin page at [http://r351574nc3.github.io/redis-maven-plugin]
+
 Running with Integration Tests
 -------------------------
 Just add the following plugin. The redis plugin is automatically
