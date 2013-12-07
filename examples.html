@@ -160,6 +160,31 @@
     &lt;artifactId&gt;redis-maven-plugin&lt;/artifactId&gt;
     &lt;version&gt;${redis-maven-plugin.version}&lt;/version&gt;
 &lt;/plugin&gt;</pre></div></div>
+<div class="section">
+<h2>Attaching to Another Phase<a name="Attaching_to_Another_Phase"></a></h2>
+<p>In case (for whatever reason), you don't want your redis server started/stopped with integration tests, here's how you would configure it.</p>
+<div class="source">
+<pre>&lt;plugin&gt;
+    &lt;groupId&gt;org.kualigan.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;redis-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;${redis-maven-plugin.version}&lt;/version&gt;
+    &lt;executions&gt;
+        &lt;execution&gt;
+            &lt;id&gt;start-redis&lt;/id&gt;
+            &lt;phase&gt;generate-resources&lt;/phase&gt;
+            &lt;goals&gt;
+                &lt;goal&gt;start&lt;/goal&gt;
+            &lt;/goals&gt;
+        &lt;/execution&gt;
+        &lt;execution&gt;
+            &lt;id&gt;stop-redis&lt;/id&gt;
+            &lt;phase&gt;compile&lt;/phase&gt;
+            &lt;goals&gt;
+                &lt;goal&gt;stop&lt;/goal&gt;
+            &lt;/goals&gt;
+        &lt;/execution&gt;      
+    &lt;/executions&gt;
+&lt;/plugin&gt;</pre></div></div>
                   </div>
           </div>
 
