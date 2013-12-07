@@ -1,11 +1,9 @@
-------
-Introduction
-------
-Leo Przybylski (r351574nc3)
-------
-12/07/2013
-------
-
+     ------
+	 Introduction
+	 ------
+	 Leo Przybylski
+	 ------
+	 ------
 
 
 Welcome to redis-maven-plugin [https://buildhive.cloudbees.com/job/r351574nc3/job/redis-maven-plugin/badge/icon] {{{https://buildhive.cloudbees.com/job/r351574nc3/job/redis-maven-plugin/}Build Status}}
