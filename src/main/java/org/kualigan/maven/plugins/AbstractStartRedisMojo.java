@@ -104,8 +104,10 @@ public abstract class AbstractStartRedisMojo extends AbstractMojo {
             final ChannelFuture f = b.bind();
 
             // Wait until the server socket is closed.
-            f.sync();
-            f.channel().closeFuture().sync();
+            if (!isForked) {
+                f.sync();
+                f.channel().closeFuture().sync();
+            }
         } finally {
             // Shut down all event loops to terminate all threads.
             group.shutdownGracefully();
